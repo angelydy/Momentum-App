@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap");
+@-webkit-keyframes fade {
+  0%, 30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  0%, 30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(https://images.unsplash.com/photo-1579706783492-081a217cd55e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  max-width: 100%;
+  color: white;
+}
+
+::-webkit-input-placeholder {
+  color: white;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+:-ms-input-placeholder {
+  color: white;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+::-ms-input-placeholder {
+  color: white;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+::placeholder {
+  color: white;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 2vh;
+}
+
+.section-one {
+  padding-top: 20vh;
+}
+
+.section-one .current-time {
+  text-align: center;
+  font-family: "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 160px;
+  font-weight: bold;
+}
+
+.section-one .greeting-and-quote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.section-one .greeting-and-quote .name {
+  border: none;
+  border-bottom: 2px solid white;
+  background: transparent;
+  width: 40vh;
+  font-size: 60px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+}
+
+.section-two {
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-two .focus {
+  border: none;
+  border-bottom: 2px solid white;
+  background: transparent;
+  width: 60vh;
+  font-size: 50px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
