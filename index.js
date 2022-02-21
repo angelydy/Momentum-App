@@ -1,12 +1,19 @@
 var today = new Date();
 var hrs24 = today.getHours()
 var hrs12 = (hrs24 % 12) || 12
-var min = today.getMinutes();
+var min = today.getMinutes()
+var body = document.body
+const theme = document.getElementById('theme')
 const greet = document.querySelector('.greeting-quote')
 const nameInput = document.getElementById('name')
 const replaceNameInput = document.createElement('show-name')
+const focusToday = document.getElementById('focus-today')
+const focusInput = document.getElementById('focus')
+const replaceFocusInput = document.createElement('show-focus')
 
-nameInput.addEventListener('keyup', showName)
+function toggleMode() {
+  body.classList.toggle('dark-mode')
+}
 
 function timeToday(h, m) {
   var time = document.querySelector('.current-time')
@@ -33,3 +40,20 @@ function showName(event) {
     replaceNameInput.style.animation = "fade 1.5s"
   }
 }
+
+function showFocus(event) {
+  if (event.keyCode === 13) {
+    replaceFocusInput.textContent = focusInput.value
+    focusInput.parentNode.replaceChild(replaceFocusInput, focusInput)
+    focusToday.textContent = "FOCUS:"
+    focusToday.style.fontWeight = "700"
+    focusToday.style.animation = "fade 1.5s"
+    replaceFocusInput.style.animation = "fade 1.5s"
+    replaceFocusInput.style.position = "relative"
+    replaceFocusInput.style.top = "-50px"
+  }
+}
+
+theme.addEventListener ('click', toggleMode)
+nameInput.addEventListener('keyup', showName)
+focusInput.addEventListener('keyup', showFocus)

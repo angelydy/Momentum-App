@@ -21,34 +21,13 @@ body {
   padding: 0;
   background-image: url(https://images.unsplash.com/photo-1579706783492-081a217cd55e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
   max-width: 100%;
   color: white;
 }
 
-::-webkit-input-placeholder {
-  color: white;
-  font-size: 20px;
-  font-weight: lighter;
-}
-
-:-ms-input-placeholder {
-  color: white;
-  font-size: 20px;
-  font-weight: lighter;
-}
-
-::-ms-input-placeholder {
-  color: white;
-  font-size: 20px;
-  font-weight: lighter;
-}
-
-::placeholder {
-  color: white;
-  font-size: 20px;
-  font-weight: lighter;
+.dark-mode {
+  color: black;
 }
 
 .navbar {
@@ -58,7 +37,23 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 2vh;
+  margin: 0 5vh;
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  top: 10px;
+}
+
+.navbar .theme {
+  text-align: center;
+  width: 50px;
+}
+
+.navbar .theme:hover {
+  border-bottom: 1px solid white;
+  width: 100px;
+  -webkit-transition: .9s ease-in-out .0s;
+  transition: .9s ease-in-out .0s;
+  cursor: pointer;
 }
 
 .section-one {
@@ -98,10 +93,35 @@ body {
   color: white;
 }
 
+.section-one .greeting-and-quote .name::-webkit-input-placeholder {
+  color: white;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.section-one .greeting-and-quote .name:-ms-input-placeholder {
+  color: white;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.section-one .greeting-and-quote .name::-ms-input-placeholder {
+  color: white;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.section-one .greeting-and-quote .name::placeholder {
+  color: white;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
 .section-two {
   text-align: center;
   font-size: 40px;
   font-family: 'Poppins', sans-serif;
+  padding-top: 40px;
 }
 
 .section-two .focus {
