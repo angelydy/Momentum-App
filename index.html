@@ -39,13 +39,17 @@
   </div>
 
   <div class="section-three">
-    <div class="to-do-container">
-      <p class="to-do">
-        TO DO
-      </p>
+    <div class="to-do-container" id="to-do-container">
+      <h3 id="todo-title">My Todo List</h3>
+      <input type="text" placeholder="Things I Want To Do..." class="todo-input">
+      <button class="add" id="add">Add</button>
+      <ul id="display-todo" class="display-todo"></ul>
     </div>
+    <p class="to-do" id="to-do">
+      TO DO
+    </p>
     <div class="quote-container">
-      <p id="quote" class="quote">"YOU CAN DO IT!"</p>
+      <p id="quote" class="quote" contenteditable="true">"YOU CAN DO IT!"</p>
     </div>
     <div class="change-bg-container">
       <p id="change-bg" class="change-bg">

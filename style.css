@@ -16,6 +16,36 @@
   }
 }
 
+@-webkit-keyframes slideRight {
+  0%, 10% {
+    position: absolute;
+    top: -550px;
+    left: -500px;
+    opacity: 0;
+  }
+  100% {
+    position: absolute;
+    top: -550px;
+    left: -30px;
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  0%, 10% {
+    position: absolute;
+    top: -550px;
+    left: -500px;
+    opacity: 0;
+  }
+  100% {
+    position: absolute;
+    top: -550px;
+    left: -30px;
+    opacity: 1;
+  }
+}
+
 header, div {
   -webkit-animation: fade 1.5s;
           animation: fade 1.5s;
@@ -157,8 +187,37 @@ body {
   margin: 0 5vh;
 }
 
+.section-three .to-do-container {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.849);
+  width: 25%;
+  height: 70vh;
+  -webkit-box-shadow: 0px 40px 100px 0px rgba(0, 0, 0, 0.377);
+          box-shadow: 0px 40px 100px 0px rgba(0, 0, 0, 0.377);
+  -webkit-animation: slideRight 1s forwards;
+          animation: slideRight 1s forwards;
+}
+
+.section-three .to-do-container input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-three .to-do-container .add {
+  background-color: #444444;
+  color: white;
+  border: none;
+  height: 30px;
+  width: 50px;
+  border-radius: 30px;
+  outline: none;
+}
+
 .section-three .quote {
   font-weight: bold;
+  outline: none;
 }
 
 .section-three .to-do:hover, .section-three .change-bg:hover, .section-three .quote:hover {

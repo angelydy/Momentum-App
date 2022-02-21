@@ -8,6 +8,21 @@
   }
 }
 
+@keyframes slideRight {
+  0%, 10% {
+    position: absolute;
+    top: -550px;
+    left: -500px;
+    opacity: 0;
+  }
+  100% {
+    position: absolute;
+    top: -550px;
+    left: -30px;
+    opacity: 1;
+  }
+}
+
 header, div {
   animation: fade 1.5s;
 }
@@ -114,8 +129,35 @@ body {
   justify-content: space-between;
   margin: 0 5vh;
 
+  .to-do-container {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.849);
+    width: 25%;
+    height: 70vh;
+    box-shadow: 0px 40px 100px 0px rgba(0, 0, 0, 0.377);
+    animation: slideRight 1s forwards;
+
+    input {
+      border: none;
+      background-color: transparent;
+      outline: none;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .add {
+      background-color: rgb(68, 68, 68);
+      color: white;
+      border: none;
+      height: 30px;
+      width: 50px;
+      border-radius: 30px;
+      outline: none;
+    }
+  }
+
   .quote {
     font-weight: bold;
+    outline: none;
   }
 
   .to-do:hover, .change-bg:hover, .quote:hover {
