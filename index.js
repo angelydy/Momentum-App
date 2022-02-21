@@ -10,6 +10,7 @@ const replaceNameInput = document.createElement('show-name')
 const focusToday = document.getElementById('focus-today')
 const focusInput = document.getElementById('focus')
 const replaceFocusInput = document.createElement('show-focus')
+const backgroundBtn = document.getElementById('change-bg')
 
 function toggleMode() {
   body.classList.toggle('dark-mode')
@@ -54,6 +55,13 @@ function showFocus(event) {
   }
 }
 
+function changeBg() {
+  body.style.backgroundImage = 'url('+ backgroundBtn.value +')';
+  body.style.backgroundSize = "cover"
+  body.style.backgroundRepeat = "no-repeat"
+}
+
 theme.addEventListener ('click', toggleMode)
 nameInput.addEventListener('keyup', showName)
 focusInput.addEventListener('keyup', showFocus)
+backgroundBtn.addEventListener('input', changeBg)

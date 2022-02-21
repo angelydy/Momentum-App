@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
 @keyframes fade {
-  0%, 30% {
+  0%, 20% {
     opacity: 0;
   }
   100% {
     opacity: 1;
   }
+}
+
+header, div {
+  animation: fade 1.5s;
 }
 
 body {
@@ -20,6 +24,7 @@ body {
 
 .dark-mode {
   color: black;
+  animation: fade 1.5s;
 }
 
 .navbar {
@@ -35,7 +40,7 @@ body {
     width: 50px;
 
     &:hover {
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid;
       width: 100px;
       transition: .9s ease-in-out .0s;
       cursor: pointer;
@@ -62,7 +67,7 @@ body {
 
     .name {
       border: none;
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid;
       background: transparent;
       width: 40vh;
       font-size: 60px;
@@ -89,7 +94,7 @@ body {
 
   .focus {
     border: none;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid;
     background: transparent;
     width: 60vh;
     font-size: 50px;
@@ -97,5 +102,19 @@ body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     color: white;
+  }
+}
+
+.section-three {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  padding-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5vh;
+
+  .to-do:hover, .change-bg:hover, &:hover {
+    cursor: pointer;
   }
 }
