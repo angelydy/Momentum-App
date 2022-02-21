@@ -55,13 +55,30 @@ function showFocus(event) {
   }
 }
 
+  counter = 0 
+  var images = [
+    "/assets/1.jpg",
+    "/assets/2.jpg",
+    "/assets/3.jpg",
+    "/assets/4.jpg",
+    "/assets/5.jpg",
+    "/assets/6.jpg",
+    "/assets/7.jpg",
+    "/assets/8.jpg",
+    "/assets/9.jpg",
+    "https://images.unsplash.com/photo-1579706783492-081a217cd55e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+  ]
+
 function changeBg() {
-  body.style.backgroundImage = 'url('+ backgroundBtn.value +')';
-  body.style.backgroundSize = "cover"
-  body.style.backgroundRepeat = "no-repeat"
+  counter += 1
+  if (counter > images.length -1) {
+    counter = 0
+  }
+  body.style.backgroundImage = 'url(' + images[counter] + ')'
+  body.style.backgroundSize = 'cover'
 }
 
 theme.addEventListener ('click', toggleMode)
 nameInput.addEventListener('keyup', showName)
 focusInput.addEventListener('keyup', showFocus)
-backgroundBtn.addEventListener('input', changeBg)
+backgroundBtn.addEventListener('click', changeBg)

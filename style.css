@@ -157,7 +157,11 @@ body {
   margin: 0 5vh;
 }
 
-.section-three .to-do:hover, .section-three .change-bg:hover, .section-three:hover {
+.section-three .quote {
+  font-weight: bold;
+}
+
+.section-three .to-do:hover, .section-three .change-bg:hover, .section-three .quote:hover {
   cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

@@ -114,7 +114,11 @@ body {
   justify-content: space-between;
   margin: 0 5vh;
 
-  .to-do:hover, .change-bg:hover, &:hover {
+  .quote {
+    font-weight: bold;
+  }
+
+  .to-do:hover, .change-bg:hover, .quote:hover {
     cursor: pointer;
   }
 }
