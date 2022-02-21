@@ -11,6 +11,7 @@ const focusToday = document.getElementById('focus-today')
 const focusInput = document.getElementById('focus')
 const replaceFocusInput = document.createElement('show-focus')
 const backgroundBtn = document.getElementById('change-bg')
+var counter = -1
 
 function toggleMode() {
   body.classList.toggle('dark-mode')
@@ -18,11 +19,16 @@ function toggleMode() {
 
 function timeToday(h, m) {
   var time = document.querySelector('.current-time')
-  time.textContent = `${h}:${((m < 10 ? '0':'')+ m)}`
+  if (m < 10) {
+    time.textContent = `${h}:0${m}`
+  }
+  else {
+    time.textContent = `${h}:${m}`
+  }
 }
 timeToday(hrs12, min)
 
-function greetingAndQuote(h) {
+function greeting(h) {
   if (h < 12) {
     greet.textContent = `Good Morning,  `
   } else if (h >= 12 && h <= 17) {
@@ -31,7 +37,7 @@ function greetingAndQuote(h) {
     greet.textContent = `Good Evening,  `
   }
 }
-greetingAndQuote(hrs24)
+greeting(hrs24)
 
 function showName(event) {
   if (event.keyCode === 13) {
@@ -55,7 +61,7 @@ function showFocus(event) {
   }
 }
 
-  counter = 0 
+function changeBg() {
   var images = [
     "/assets/1.jpg",
     "/assets/2.jpg",
@@ -68,13 +74,8 @@ function showFocus(event) {
     "/assets/9.jpg",
     "https://images.unsplash.com/photo-1579706783492-081a217cd55e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
   ]
-
-function changeBg() {
-  counter += 1
-  if (counter > images.length -1) {
-    counter = 0
-  }
-  body.style.backgroundImage = 'url(' + images[counter] + ')'
+  counter ++ 
+  body.style.backgroundImage = 'url('+ images[counter] +')'
   body.style.backgroundSize = 'cover'
 }
 
