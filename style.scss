@@ -131,11 +131,35 @@ body {
 
   .to-do-container {
     color: black;
+    overflow: auto;
     background-color: rgba(255, 255, 255, 0.849);
-    width: 25%;
+    width: 350px;
     height: 70vh;
     box-shadow: 0px 40px 100px 0px rgba(0, 0, 0, 0.377);
     animation: slideRight 1s forwards;
+
+    ul {
+      overflow: auto;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      list-style: none;
+      padding-top: 20px;
+      border-top: 2px solid rgba(58, 58, 58, 0.288);
+
+      li {
+        margin: 15px;
+        width: 120px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    :checked {
+      text-decoration: line-through;
+      color: gray;
+    }
 
     input {
       border: none;
@@ -152,6 +176,23 @@ body {
       width: 50px;
       border-radius: 30px;
       outline: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .close {
+      width: 30px;
+      border-radius: 50px;
+      background-color: rgb(61, 61, 61);
+      color: white;
+      position: absolute;
+      right: 40px;
+
+      &:hover {
+      cursor: pointer;
+      }
     }
   }
 

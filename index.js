@@ -71,11 +71,9 @@ function showFocus(event) {
 focusInput.addEventListener('keyup', showFocus)
 
 
-//TO-DO LIST
+//  DISPLAYING TO-DO LIST CONTAINER
 const todoBtn = document.getElementById('to-do')
 const todoContainer = document.getElementById('to-do-container')
-const todoList = document.createElement('li')
-const addTodo = document.getElementById('display-todo')
 function displayTodo() {
   if (todoContainer.style.display === "none"){
     todoContainer.style.display = "block"
@@ -84,6 +82,38 @@ function displayTodo() {
   }
 }
 todoBtn.addEventListener('click', displayTodo)
+
+
+//add/remove items from the list
+var todoUL = document.getElementById('todo-ul')
+const add = document.getElementById('add')
+function updateTodo() {
+  const todoInput = document.getElementById('todo-input').value
+  var todoList = document.createElement('li')
+
+  if (todoInput === '') {
+    alert("Oops! Please write something")
+  } else {
+    todoList.textContent = todoInput
+    todoUL.appendChild(todoList)
+  }
+
+  var span = document.createElement('span')
+  var x = document.createTextNode('×')
+  span.className = 'close'
+  span.appendChild(x)
+  todoList.append(span)
+
+  //Removing items from the list
+  var close = document.getElementsByClassName('close')
+  for (a = 0; a < close.length; a++) {
+    close[a].addEventListener('click', function() {
+      var del = this.parentElement;
+      del.style.display = 'none'
+    })
+  }
+}
+add.addEventListener('click', updateTodo)
 
 
 //Change background image
