@@ -68,33 +68,30 @@ body {
 }
 
 .navbar {
+  position: relative;
+  margin: 5px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 5vh;
   font-family: 'Poppins', sans-serif;
-  position: absolute;
-  top: 10px;
+  height: 30px;
 }
 
-.navbar .theme {
+.navbar .theme, .navbar .bookmarks {
   text-align: center;
-  width: 50px;
 }
 
-.navbar .theme:hover {
-  border-bottom: 1px solid;
-  width: 100px;
+.navbar .theme:hover, .navbar .bookmarks:hover {
   -webkit-transition: .9s ease-in-out .0s;
   transition: .9s ease-in-out .0s;
   cursor: pointer;
 }
 
 .section-one {
-  padding-top: 20vh;
+  padding-top: 15vh;
 }
 
 .section-one .current-time {
@@ -197,6 +194,7 @@ body {
           box-shadow: 0px 40px 100px 0px rgba(0, 0, 0, 0.377);
   -webkit-animation: slideRight 1s forwards;
           animation: slideRight 1s forwards;
+  display: none;
 }
 
 .section-three .to-do-container ul {
