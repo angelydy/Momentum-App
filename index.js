@@ -84,7 +84,7 @@ function displayTodo() {
 todoBtn.addEventListener('click', displayTodo)
 
 
-//add/remove items from the list
+// add/remove items from the list
 var todoUL = document.getElementById('todo-ul')
 const add = document.getElementById('add')
 function updateTodo() {
@@ -98,11 +98,20 @@ function updateTodo() {
     todoUL.appendChild(todoList)
   }
 
+  //adding x button
   var span = document.createElement('span')
   var x = document.createTextNode('×')
   span.className = 'close'
   span.appendChild(x)
   todoList.append(span)
+
+  //adding checkbox
+  var span = document.createElement('span')
+  var check = document.createElement('input')
+  check.setAttribute('type', 'checkbox')
+  span.className = 'checked'
+  span.appendChild(check)
+  todoList.appendChild(span)
 
   //Removing items from the list
   var close = document.getElementsByClassName('close')
@@ -112,6 +121,9 @@ function updateTodo() {
       del.style.display = 'none'
     })
   }
+
+  //checking items to the list
+
 }
 add.addEventListener('click', updateTodo)
 

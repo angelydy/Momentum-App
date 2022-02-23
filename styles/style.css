@@ -216,11 +216,6 @@ body {
   cursor: pointer;
 }
 
-.section-three .to-do-container :checked {
-  text-decoration: line-through;
-  color: gray;
-}
-
 .section-three .to-do-container input {
   border: none;
   background-color: transparent;

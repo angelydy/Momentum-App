@@ -1,0 +1,23 @@
+@keyframes fade {
+  0%, 20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  0%, 10% {
+    position: absolute;
+    top: -550px;
+    left: -500px;
+    opacity: 0;
+  }
+  100% {
+    position: absolute;
+    top: -550px;
+    left: -30px;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,17 @@
+.navbar {
+  position: relative;
+  margin: 5px 50px;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+  height: 30px;
+
+  .theme, .bookmarks {
+    text-align: center;
+
+    &:hover {
+      transition: .9s ease-in-out .0s;
+      cursor: pointer;
+    }
+  }
+}
