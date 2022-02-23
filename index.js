@@ -27,7 +27,7 @@ timeToday(hrs12, min)
 //Add greeting
 const greet = document.querySelector('.greeting-quote')
 function greeting(h) {
-  if (h < 12) {
+  if (h <= 12) {
     greet.textContent = `Good Morning,  `
   } else if (h >= 12 && h <= 17) {
     greet.textContent = `Good Afternoon,  `
