@@ -98,32 +98,34 @@ function updateTodo() {
     todoUL.appendChild(todoList)
   }
 
-  //adding x button
+  //adding x button and removing items from list
   var span = document.createElement('span')
   var x = document.createTextNode('×')
   span.className = 'close'
   span.appendChild(x)
+  span.addEventListener('click', function() {
+    var del = this.parentElement;
+    del.style.display = 'none'
+  })
   todoList.append(span)
 
   //adding checkbox
   var span = document.createElement('span')
   var check = document.createElement('input')
   check.setAttribute('type', 'checkbox')
-  span.className = 'checked'
+  check.addEventListener('click', function() {
+    if (check.checked) {
+      todoList.style.textDecoration = 'line-through'
+      todoList.style.color = 'gray'
+    }
+    else {
+      todoList.style.textDecoration = 'none'
+      todoList.style.color = 'black'
+    }
+  })
+  span.className = 'check'
   span.appendChild(check)
   todoList.appendChild(span)
-
-  //Removing items from the list
-  var close = document.getElementsByClassName('close')
-  for (a = 0; a < close.length; a++) {
-    close[a].addEventListener('click', function() {
-      var del = this.parentElement;
-      del.style.display = 'none'
-    })
-  }
-
-  //checking items to the list
-
 }
 add.addEventListener('click', updateTodo)
 
@@ -146,7 +148,7 @@ function changeBg() {
   ]
   counter ++
 
-  if (counter > images.length -1) {
+  if (counter > images.length - 1) {
     counter = 0
   }
 
