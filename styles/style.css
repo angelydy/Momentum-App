@@ -263,4 +263,22 @@ body {
   -webkit-animation: fade 1.5s;
           animation: fade 1.5s;
 }
+
+@media screen and (min-width: 320px) and (max-width: 900px) {
+  body {
+    max-width: 100%;
+  }
+  .greeting-and-quote {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .to-do-container {
+    background-color: white;
+  }
+}
 /*# sourceMappingURL=style.css.map */
