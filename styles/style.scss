@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
-@import '/styles/keyframes';
-@import '/styles/navbar';
-@import '/styles/section-one';
-@import '/styles/section-two';
-@import '/styles/section-three';
+@import 'keyframes';
+@import 'navbar';
+@import 'section-one';
+@import 'section-two';
+@import 'section-three';
 
 header, div {
   animation: fade 1.5s;
