@@ -158,8 +158,13 @@ quoteBtn.addEventListener('click', addQuote)
 var quoteInput = document.getElementById('quote-input')
 var addQuote = document.getElementById('add-quote')
 function changeQuote(event) {
-  quoteBtn.textContent = quoteInput.value
-  quoteBtn.style.animation = 'fade 1s'
+  if (quoteInput.value === '') {
+    alert('Oops! Please write something.')
+  } else {
+    quoteBtn.textContent = quoteInput.value
+    quoteBtn.style.animation = 'fade 1s'
+    newQuote.style.display = 'none'
+  }
 }
 addQuote.addEventListener('click', changeQuote)
 
