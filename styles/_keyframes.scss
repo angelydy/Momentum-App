@@ -10,14 +10,44 @@
 @keyframes slideRight {
   0%, 10% {
     position: absolute;
-    top: -550px;
-    left: -500px;
+    bottom: 0px;
+    left: -30px;
     opacity: 0;
   }
   100% {
     position: absolute;
-    top: -550px;
+    bottom: 80px;
     left: -30px;
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0%, 10% {
+    position: absolute;
+    top: 0px;
+    right: -30px;
+    opacity: 0;
+  }
+  100% {
+    position: absolute;
+    top: 70px;
+    right: -30px;
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0%, 10% {
+    position: absolute;
+    top: -90px;
+    left: 440px;
+    opacity: 0;
+  }
+  100% {
+    position: absolute;
+    top: -400px;
+    left: 440px;
     opacity: 1;
   }
 }

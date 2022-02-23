@@ -15,8 +15,14 @@
       <div class="theme" id="theme">
         <p>MODE</p>
       </div>
-      <div class="bookmarks">
+      <div class="bookmarks" id="bookmarkBtn">
         <p>BOOKMARKS</p>
+      </div>
+      <div class="bookmarks-container" id="bookmarks-container">
+        <h3>Bookmarks</h3>
+        <input type="text" placeholder="Add some bookmarks" class="bookmark-input" id="bookmark-input">
+        <button class="add-bookmark" id="add-bookmark">Add</button>
+        <ul id="bookrmark-ul" class="bookrmark-ul"></ul>
       </div>
     </navbar>
   </header>
@@ -50,7 +56,14 @@
       TO DO
     </p>
     <div class="quote-container">
-      <p id="quote" class="quote" contenteditable="true">"YOU CAN DO IT!"</p>
+      <p id="quote" class="quote">"YOU CAN DO IT!"</p>
+    </div>
+    <div class="new-quote" id="new-quote">
+      <br>
+      <h3>Change Your Motivational Quote</h3>
+      <input type="text" placeholder="type your motivational quote here..." class="quote-input" id="quote-input">
+      <br><br>
+      <button class="add-quote" id="add-quote">Change</button>
     </div>
     <div class="change-bg-container">
       <p id="change-bg" class="change-bg">

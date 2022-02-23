@@ -7,6 +7,18 @@ function toggleMode() {
 }
 theme.addEventListener ('click', toggleMode)
 
+//add bookmarks 
+const bookmarkContainer = document.getElementById('bookmarks-container')
+const bookmarkBtn = document.getElementById('bookmarkBtn')
+function displayBookmarks() {
+  if (bookmarkContainer.style.display === "none"){
+    bookmarkContainer.style.display = "block"
+  } else {
+    bookmarkContainer.style.display = "none"
+  }
+}
+bookmarkBtn.addEventListener('click', displayBookmarks)
+
 //Add time
 var today = new Date();
 var hrs24 = today.getHours()
@@ -128,6 +140,28 @@ function updateTodo() {
   todoList.appendChild(span)
 }
 add.addEventListener('click', updateTodo)
+
+//dsplay change quote container
+const quoteBtn = document.getElementById('quote')
+const newQuote = document.getElementById('new-quote')
+function addQuote() {
+  if (newQuote.style.display === 'none') {
+    newQuote.style.display = 'block'
+  } else {
+    newQuote.style.display = 'none'
+  }
+}
+quoteBtn.addEventListener('click', addQuote)
+
+
+//change current quote
+var quoteInput = document.getElementById('quote-input')
+var addQuote = document.getElementById('add-quote')
+function changeQuote(event) {
+  quoteBtn.textContent = quoteInput.value
+  quoteBtn.style.animation = 'fade 1s'
+}
+addQuote.addEventListener('click', changeQuote)
 
 
 //Change background image
