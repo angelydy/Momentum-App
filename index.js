@@ -157,7 +157,7 @@ quoteBtn.addEventListener('click', addQuote)
 //change current quote
 var quoteInput = document.getElementById('quote-input')
 var addQuote = document.getElementById('add-quote')
-function changeQuote(event) {
+function changeQuote() {
   if (quoteInput.value === '') {
     alert('Oops! Please write something.')
   } else {
