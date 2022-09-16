@@ -1,12 +1,13 @@
 .section-three {
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  position: relative;
+  position: fixed;
   display: flex;
   justify-content: space-between;
-  padding-top: 9vh;
+  bottom: 2vh;
   margin: 0 4vw;
-
+  max-width: 100%;
+  min-width: 90vw;
 
   .to-do-container {
     color: black;
